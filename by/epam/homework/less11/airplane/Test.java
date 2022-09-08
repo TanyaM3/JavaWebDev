@@ -16,7 +16,7 @@ public class Test {
 		msq.addPlane(plane3);
 		msq.addPlane(plane4);
 		
-		for(Airplane plane : msq.airplanes) {
+		for(Airplane plane : msq.getAirplanes()) {
 			if(plane.isPlaneInTheDirection("Berlin")) {
 				System.out.println("Plane № " + plane.getFlightNumber() + " to " + plane.getDestination() + " on " + plane.getDay() + ", departure time " + plane.getDepartureTime());
 			}
@@ -24,7 +24,7 @@ public class Test {
 		
 		System.out.println();
 		
-		for(Airplane plane : msq.airplanes) {
+		for(Airplane plane : msq.getAirplanes()) {
 			if(plane.isPlaneOnTheDay("Tuesday")) {
 				System.out.println("Plane № " + plane.getFlightNumber() + " to " + plane.getDestination() + " on " + plane.getDay() + ", departure time " + plane.getDepartureTime());
 			}
@@ -32,7 +32,7 @@ public class Test {
 		
 		System.out.println();
 		
-		for(Airplane plane : msq.airplanes) {
+		for(Airplane plane : msq.getAirplanes()) {
 			if(plane.isPlaneOnTheDayAfterTime("Tuesday", new Time(9123777))) {
 				System.out.println("Plane № " + plane.getFlightNumber() + " to " + plane.getDestination() + " on " + plane.getDay() + ", departure time " + plane.getDepartureTime());
 			}
